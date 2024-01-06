@@ -3,7 +3,7 @@ import NextHead from 'next/head'
 export default function HeadingComponent(): JSX.Element {
 	return (
 		<NextHead>
-			<link rel="icon" type="image/jpg" href="/logo-raka.jpg" />
+			<link rel="icon" type="image/jpg" href="./logo-raka.jpg" />
 			<meta charSet="utf-8" />
 			<meta name="author" content="joshuak21" />
 			<meta name="description" content="Portfolio - Raka" />
