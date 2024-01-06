@@ -3,6 +3,13 @@
 @tailwind utilities;
 @import './font.css';
 
+@import "~@iconscout/unicons/css/animation.css";
+@import "~@iconscout/unicons/css/before.css";
+@import "~@iconscout/unicons/css/solid.css";
+@import "~@iconscout/unicons/css/line.css";
+@import "~@iconscout/unicons/css/thinline.css";
+
+
 html {
   background: #000000;
   font-family: 'Montserrat', sans-serif;
