@@ -3,6 +3,7 @@ import NextImage from 'next/image'
 
 import Styles from './style.module.css'
 import HeaderComponent from '@/components/header'
+import HeadingComponent from '@/components/heading'
 
 export default function HomePage(): JSX.Element {
 	const [state, setState] = useState({
@@ -14,6 +15,7 @@ export default function HomePage(): JSX.Element {
 	}
 
 	return (<>
+		<HeadingComponent />
 		<HeaderComponent />
 		<main>
 			<section id="banner" className={`w-full h-full min-h-[100vh] relative bg-[#000000] ${Styles['banner-section']}`}>
@@ -29,7 +31,7 @@ export default function HomePage(): JSX.Element {
 				</div>
 			</section>
 			{state.isClicked && (<>
-				<section id="porto-section" className="w-full h-full min-h-[100vh] bg-[#000000]">
+				<section id="porto-section" className={`w-full h-full min-h-[100vh] ${Styles['porto-section']}`}>
 					<p className="text-white text-[5em] font-bold">Portfolio Sections</p>
 				</section>
 			</>)}
