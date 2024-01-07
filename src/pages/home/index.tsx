@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import NextImage from 'next/image'
 
 import HeaderComponent from '@/components/header'
@@ -6,6 +6,7 @@ import HeadingComponent from '@/components/heading'
 
 import Styles from './style.module.css'
 
+import SwiperCore from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCreative, Navigation } from 'swiper/modules'
 
@@ -38,7 +39,7 @@ export default function HomePage(): JSX.Element {
 	})
 	const [index, setIndex] = useState(0)
 	const [showModalArtworks, setShowModalArtworks] = useState(false)
-	const swiperMainRef = useRef()
+	const [swiperMainRef, setSwiperMainRef] = useState<SwiperCore>()
 
 	function toggleStartButton(): void {
 		setState({ isClicked: true })
@@ -47,7 +48,7 @@ export default function HomePage(): JSX.Element {
 	function openModalArtworks(idx: number): void {
 		const body: HTMLBodyElement = document.getElementsByTagName('body')[0]
 		body.style.overflow = 'hidden'
-		swiperMainRef?.current?.slideTo(idx)
+		swiperMainRef?.slideTo(idx)
 		setIndex(idx)
 		setShowModalArtworks(true)
 	}
@@ -61,13 +62,13 @@ export default function HomePage(): JSX.Element {
 	function prevSlide(): void {
 		const newIndex: number = index - 1
 		setIndex(newIndex)
-		swiperMainRef?.current?.slidePrev()
+		swiperMainRef?.slidePrev()
 	}
 
 	function nextSlide(): void {
 		const newIndex: number = index + 1
 		setIndex(newIndex)
-		swiperMainRef?.current?.slideNext()
+		swiperMainRef?.slideNext()
 	}
 
 	return (<>
@@ -164,7 +165,7 @@ export default function HomePage(): JSX.Element {
 						<Swiper grabCursor={false} allowTouchMove={false} effect="creative" slidesPerView={1} spaceBetween={24} creativeEffect={{
 							prev: { shadow: true, translate: [0, 0, -400] },
 							next: { translate: ['100%', 0, 0] }
-						}} modules={[EffectCreative]} onSwiper={(swiper: any) => { swiperMainRef.current = swiper }}>
+						}} modules={[EffectCreative]} onSwiper={setSwiperMainRef}>
 							<SwiperSlide>
 								<div className={`flex flex-row w-full h-full max-h-[600px] relative ${Styles['swiper-content']}`}>
 									<div className="w-[65%]">
