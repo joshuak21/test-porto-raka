@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NextImage from 'next/image'
+import NextLink from 'next/link'
 
 import Styles from './header-style.module.css'
 
@@ -26,23 +27,23 @@ export default function HeaderComponent(): JSX.Element {
 						<button type="button" onClick={toggleSidebar}>
 							<NextImage src="./landing/close-icon.png" width={48} height={48} alt="" />
 						</button>
-						<button type="button" className={`text-[#505050] text-[4em] flex flex-row ${Styles['header-content']}`}>
+						<NextLink href="/#portfolio" onClick={toggleSidebar} className={`text-[#505050] text-[4em] flex flex-row ${Styles['header-content']}`}>
 							<i className="uil uil-arrow-down-right leading-[1] w-0 overflow-hidden opacity-0" />
 							<p className="leading-[1] w-auto text-left">PORTFOLIO</p>
 							<p className={Styles['header-content-subtitle']}>Selected works of<br />mine</p>
-						</button>
+						</NextLink>
 						<div className="w-[80px] h-[2px] bg-[#505050] my-[1.25em] mr-[64px]" />
-						<button type="button" className={`text-[#505050] text-[4em] flex flex-row ${Styles['header-content']}`}>
+						<NextLink href="/#personal-info" scroll={false} onClick={toggleSidebar} className={`text-[#505050] text-[4em] flex flex-row ${Styles['header-content']}`}>
 							<i className="uil uil-arrow-down-right leading-[1] w-0 overflow-hidden opacity-0" />
 							<p className="leading-[1] w-auto text-left">PERSONAL INFO</p>
 							<p className={Styles['header-content-subtitle']}>Get to know me<br />better</p>
-						</button>
-						<button type="button" className={`text-[#505050] text-[4em] flex flex-row ${Styles['header-content']}`}>
+						</NextLink>
+						<button type="button" onClick={toggleSidebar} className={`text-[#505050] text-[4em] flex flex-row ${Styles['header-content']}`}>
 							<i className="uil uil-arrow-down-right leading-[1] w-0 overflow-hidden opacity-0" />
 							<p className="leading-[1] w-auto text-left">EXPERIENCE</p>
 							<p className={Styles['header-content-subtitle']}>Working experiences<br />&amp; others</p>
 						</button>
-						<button type="button" className={`text-[#505050] text-[4em] flex flex-row ${Styles['header-content']}`}>
+						<button type="button" onClick={toggleSidebar} className={`text-[#505050] text-[4em] flex flex-row ${Styles['header-content']}`}>
 							<i className="uil uil-arrow-down-right leading-[1] w-0 overflow-hidden opacity-0" />
 							<p className="leading-[1] w-auto text-left">CONTACTS</p>
 							<p className={Styles['header-content-subtitle']}>Get in touch<br />with me</p>

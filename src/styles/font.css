@@ -71,3 +71,78 @@
 	font-display: swap;
 }
 /* ============================================================================== */
+
+
+/* MERSAD */
+@font-face {
+	font-family: Mersad;
+	/* src: url(/font/Montserrat/Montserrat-Thin.ttf); */
+	src: url('../../public/font/Mersad/Mersad-Thin.otf');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Mersad;
+	/* src: url(/font/Montserrat/Montserrat-ExtraLight.ttf); */
+	src: url('../../public/font/Mersad/Mersad-ExtraLight.otf');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Mersad;
+	/* src: url(/font/Montserrat/Montserrat-Light.ttf); */
+	src: url('../../public/font/Mersad/Mersad-Light.otf');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Mersad;
+	/* src: url(/font/Montserrat/Montserrat-Regular.ttf); */
+	src: url('../../public/font/Mersad/Mersad-Regular.otf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Mersad;
+	/* src: url(/font/Montserrat/Montserrat-Medium.ttf); */
+	src: url('../../public/font/Mersad/Mersad-Medium.otf');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Mersad;
+	/* src: url(/font/Montserrat/Montserrat-SemiBold.ttf); */
+	src: url('../../public/font/Mersad/Mersad-SemiBold.otf');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Mersad;
+	/* src: url(/font/Montserrat/Montserrat-Bold.ttf); */
+	src: url('../../public/font/Mersad/Mersad-Bold.otf');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Mersad;
+	/* src: url(/font/Montserrat/Montserrat-ExtraBold.ttf); */
+	src: url('../../public/font/Mersad/Mersad-ExtraBold.otf');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+/* ============================================================================== */

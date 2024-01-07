@@ -22,6 +22,7 @@
 	position: relative;
 	transition: all .3s ease;
 	text-transform: uppercase;
+	text-align: center;
 	color: #FFFFFF;
 }
 
@@ -92,4 +93,67 @@
 
 .clicked .line:last-child {
 	transform: translateX(100%);
+}
+
+.personal-info-section {
+	padding: 5em 0;
+	margin: 5em 0;
+}
+
+.divider-section {
+	background: url('../../../public/landing/intro-banner.png');
+	background-repeat: repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;	
+	position: relative;
+}
+
+.divider-inner-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(180deg, rgba(11,11,11,1) 5%, rgba(11,11,11,.5) 50%, rgba(11,11,11,1) 105%);
+}
+
+.portfolio-section {
+	padding: 5em 0;
+	margin: 5em 0;
+}
+
+.contents-grid {
+	row-gap: 2em;
+	column-gap: 2em;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.swiper-content {
+	background: url('../../../public//landing/portfolio/content-bg.png');
+	background-size: cover;
+	padding: 2em 10px;
+}
+
+.modal-artworks {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.75);
+	z-index: -1;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .5s ease;
+}
+
+.modal-artworks.show {
+	opacity: 1;
+	z-index: 999;
+	pointer-events: unset;
 }

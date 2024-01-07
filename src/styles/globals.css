@@ -13,6 +13,16 @@
 html {
   background: #0B0B0B;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.Mersad {
+  font-family: 'Mersad', sans-serif !important;
+}
+
+.swiper-white-navigation .swiper-button-prev,
+.swiper-white-navigation .swiper-button-next {
+  color: #FFFFFF;
 }
 
 /* :root {
